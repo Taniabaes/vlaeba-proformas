@@ -1,0 +1,66 @@
+
+:root{
+  --ink:#1f2937;
+  --muted:#6b7280;
+  --primary:#0ea5b7;
+  --bg:#ffffff;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;background:var(--bg);color:var(--ink);font:14px/1.35 system-ui, -apple-system, Segoe UI, Roboto, 'Helvetica Neue', Arial}
+.appbar{display:flex;justify-content:space-between;align-items:center;padding:.6rem 1rem;border-bottom:1px solid #e5e7eb;background:#fff;position:sticky;top:0;z-index:10}
+.brand{display:flex;align-items:center;gap:.5rem}
+.brand-title{font-weight:700}
+.brand-dot{width:6px;height:6px;border-radius:50%;background:var(--primary);display:inline-block}
+.brand-sub{color:var(--muted);font-size:.9rem}
+.actions button,.import-label{margin-left:.35rem;padding:.45rem .7rem;border:1px solid #e5e7eb;background:#f9fafb;border-radius:.5rem;cursor:pointer}
+.import-label{display:inline-block}
+.small{font-size:.85rem;color:var(--muted)}
+.page{width:210mm;min-height:297mm;margin:10px auto;padding:16mm;background:#fff;box-shadow:0 1px 20px rgba(0,0,0,.06)}
+.pf-header{display:grid;grid-template-columns:110px 1fr 220px;gap:12px;align-items:center;margin-bottom:10px}
+.logo-box img{width:100%;height:auto;object-fit:contain}
+.logo-placeholder{width:100%;height:100px;border:1px dashed #cbd5e1;display:flex;align-items:center;justify-content:center;color:#9ca3af}
+.company-box h1{margin:0 0 4px 0;font-size:20px}
+.company-box h2{margin:0 0 2px 0;font-size:16px;color:var(--primary)}
+.company-box p{margin:.5px 0;font-size:12px;color:#374151}
+.meta-box{border:1px solid #e5e7eb;border-radius:8px;padding:8px}
+.meta-box .row{display:flex;align-items:center;gap:8px;margin:6px 0}
+.meta-box label{width:105px;font-weight:600;font-size:12px}
+.meta-box input,.meta-box select{flex:1;padding:6px;border:1px solid #e5e7eb;border-radius:6px}
+.block{margin-top:14px}
+.block h3{margin:0 0 8px 0}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.grid2 label{display:flex;flex-direction:column;font-weight:600;font-size:12px}
+.grid2 input{margin-top:4px;padding:8px;border:1px solid #e5e7eb;border-radius:6px}
+.block-head{display:flex;align-items:center;justify-content:space-between}
+.table-wrap{overflow:auto;border:1px solid #e5e7eb;border-radius:8px}
+table{width:100%;border-collapse:collapse}
+th,td{border-bottom:1px solid #e5e7eb;padding:8px;font-size:12px;vertical-align:top}
+thead th{background:#f8fafc;text-align:left}
+.col-desc{width:38%}
+td input, td select, td textarea{width:100%;padding:6px;border:1px solid #e5e7eb;border-radius:6px;font-size:12px}
+td .num{ text-align:right; }
+td .center{ text-align:center; }
+.totals{display:grid;grid-template-columns:1fr 280px;gap:16px;align-items:start}
+.conditions label{display:flex;flex-direction:column;font-weight:600;font-size:12px;margin:6px 0}
+.conditions textarea{margin-top:4px;padding:8px;border:1px solid #e5e7eb;border-radius:6px}
+.totals-box{border:1px solid #e5e7eb;border-radius:8px;padding:8px}
+.totals-box .row{display:flex;justify-content:space-between;align-items:center;margin:6px 0}
+.totals-box .row.total{font-weight:800;font-size:16px;border-top:2px solid #e5e7eb;padding-top:8px}
+.totals-box input{width:120px;text-align:right;padding:6px;border:1px solid #e5e7eb;border-radius:6px}
+.payment .banks h4,.payment .qr h4{margin:.2rem 0}
+#banksList .bank{border:1px solid #e5e7eb;border-radius:8px;padding:8px;margin-bottom:8px}
+#banksList .bank .row{display:grid;grid-template-columns:1fr 2fr;gap:8px;margin:4px 0}
+#banksList .bank .row input{padding:6px;border:1px solid #e5e7eb;border-radius:6px}
+.qr .qr-box{border:1px dashed #cbd5e1;border-radius:8px;padding:10px;text-align:center;min-height:160px;display:flex;align-items:center;justify-content:center;flex-direction:column}
+.qr .qr-box img{max-width:180px;max-height:180px}
+.muted{color:#6b7280;font-size:.9rem}
+.signatures{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:26px}
+.sig .line{height:1px;background:#111;margin:22px 0 6px 0}
+.foot{margin-top:18px;text-align:center;color:#6b7280;font-size:11px}
+.no-print{ }
+@media print{
+  .no-print{display:none !important}
+  body{background:#fff}
+  .page{box-shadow:none;margin:0;padding:12mm}
+  @page{size:A4;margin:10mm}
+}
